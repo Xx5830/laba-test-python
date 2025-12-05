@@ -93,4 +93,8 @@ print(perimetr(1.0, 2.0, 3.0))
 ```
 
 ## История развития проекта
+commit dc664a master
+Author: X_xp <timurbilalov14@gmail.com>
+Date:   Fri Dec 5 05:03:44 2025 +0300
+    add test for all figure
 
