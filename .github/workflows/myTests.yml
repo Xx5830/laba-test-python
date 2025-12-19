@@ -20,4 +20,5 @@ jobs:
         with:
           python-version: '3.11' 
       - name: Run tests with pytest
-        run: python -m unittest circle.py square.py triangle.py
+        run: pytest circle.py square.py triangle.py
+
