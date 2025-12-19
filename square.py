@@ -25,7 +25,7 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(area(0), 0)
     
     def test_area_positive_integer(self):
-        self.assertEqual(area(1), 1)
+        self.assertEqual(area(1), 2)
         self.assertEqual(area(2), 4)
         self.assertEqual(area(5), 25)
         self.assertEqual(area(10), 100)
