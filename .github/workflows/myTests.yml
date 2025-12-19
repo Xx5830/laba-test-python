@@ -20,5 +20,5 @@ jobs:
         with:
           python-version: '3.11' 
       - name: Run tests with pytest
-        run: pyton3 -m unittest discover -v -s tests -p "test_*.py"
+        run: python3 -m unittest discover -v -s tests -p "test_*.py"
 
