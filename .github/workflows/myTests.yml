@@ -36,7 +36,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        python -c "import os; print('Checking for requirements.txt...'); exit(0) if not os.path.exists('requirements.txt') else exit(1)"
+        pip install -r requirements.txt
 
     - name: Run tests with pytest
       run: |
