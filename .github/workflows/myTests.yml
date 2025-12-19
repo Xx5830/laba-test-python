@@ -9,24 +9,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }} 
+  build:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest] 
-        python-version: ["3.9"] 
-
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }} 
     steps:
-    - name: clone rep
-      uses:
-        actions/checkout@v4
-    - name: install python
-      uses:
-        actions/setup-python@v5
-      with:
-        python-version: '3.9'
-
-      
-    - name: Run tests with pytest
-      run: |
-        python -m unittest circle.py square.py triangle.py
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6.1.0
+        with:
+          python-version: '3.11' 
+      - name: Run tests with pytest
+        run: python -m unittest circle.py square.py triangle.py
